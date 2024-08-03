@@ -1,9 +1,13 @@
+const path = require("path");
 const express = require('express');
+const ejs = require("ejs");
+
 const app = express();
 
 
 // Set up view engine
 app.set('view engine', 'ejs');
+app.set("views", path.join(__dirname, "views"));
 // enable static files
 app.use(express.static('public'));
 // enable from processing 
